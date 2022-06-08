@@ -1,16 +1,20 @@
-/* Функция для проверки максимальной длины строки
-  Результат: true, если строка проходит по длине, и false — если не проходит */
+// Функция, возвращающая случайное целое число из переданного диапазона включительно.
+function getRandomIntInclusive(min, max) {
+  const a = Math.ceil(min);
+  const b = Math.floor(max);
+  return Math.floor(Math.random() * (b - a + 1)) + a; // Максимум и минимум включён
+}
 
-stringLength(stringCheck, stringMaxLength) {
-  stringMaxLength = (0, 140); // Результат: целое число из диапазона "от 0 до 140 cимволов"
-  if (stringLength <= stringMaxLength) {
+getRandomIntInclusive(5, 20);
+
+// Функция для проверки максимальной длины строки
+
+function stringLength(stringCheck, stringMaxLength) {
+  if (stringMaxLength >= stringCheck.length) {
     return true;
-  } else {
-
-  } return false;
-
   }
+  return false;
+}
 
-  stringCheck();
-  stringLength();
+stringLength('test', 2);
 
